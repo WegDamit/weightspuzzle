@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>weight puzzle</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <body>
+      <div class="tabs">
+        <ul id="tablist">
+          <li class="active"><a href="#item1">Puzzle</a></li>
+          <li><a href="#item2">Manage</a></li>
+          <li><a href="#item3">Whatever</a></li>
+        </ul>
+
+        <div class="tabInner">
+          <div id="item1">
+            <form id="puzzle">
+              <fieldset>
+                <legend>Puzzle</legend>
+                <label for="handleWeight">Handle Weight:
+                  <input  class="btn" name="handleWeight" id="handleWeight" placeholder="15">
+                </label>
+                <br />
+                <label for="wantedWeight">Wanted Weight:
+                  <input class="btn" name="wantedWeight" id="wantedWeight" placeholder="wantedWeight">
+                </label>
+                <br />
+                <label for="puzzleButton">
+                  <button class="btn fifth" name="puzzleButton" type="button" onClick="puzzle()">solve</button>
+                </label>
+              </fieldset>
+            </form>
+            
+            <div id="solved" class="outerDiv">
+              <div id="handle" class="square">15</div>
+            </div>
+            <button class="btn fifth" name="clearUseList" type="button" onClick="clearUseList()">clear</button>
+          </div>
+          
+          <div id="item2">
+            <div id="outerweights" class="outerDiv">
+                <div id="listofweights">
+              </div>
+            </div>
+            <div id="addWeight">
+              <form id="addWeightForm">
+                <input type="text" id="newWeight" placeholder="Weight">
+                <button name="addWeightButton" type="button"  onClick="addWeight()">add</button>
+              </form>
+            </div>
+            <div id="storageButtons">
+              <button name="retrieveWeightsButton" type="button" onClick="retrieveWeightsList()">retrieve</button>
+              <button name="storeWeightsListButton" type="button" onClick="storeWeightsList()">store</button>
+            </div>
+          </div>
+
+        <div id="item3">
+          bla3
+        </div>
+      </div>
+    </body>
+    <script src="js/index.js"></script>
+  </body>
+</html>
