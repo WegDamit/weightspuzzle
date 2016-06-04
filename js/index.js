@@ -44,12 +44,11 @@ function removeWeight(w) {
 }
 
 function makeWeightList(array) {
-  var list = document.createElement('div');
+  var list = document.createElement('ul');
   list.id = WeightsUlId;
-  list.className = "outerDiv";
   for (var i = 0, w; w = array[i]; i++) {
-    var item = document.createElement('div');
-    item.className = "weightListItem";
+    var item = document.createElement('li');
+    // item.className = "weightListItem";
 
     var outer = document.createElement("div");
     outer.name = "weight" + w;
